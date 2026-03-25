@@ -1,0 +1,14 @@
+Optimización de Inventario Farmacéutico (Pandas + Numpy)
+El Problema:
+Una cadena de farmacias necesita identificar productos críticos que tienen bajo stock pero alta demanda para priorizar su reabastecimiento. Recibes un DataFrame con el inventario actual.
+
+Tu Misión:
+Escribe una función llamada priorizar_reabastecimiento(df, stock_umbral, demanda_umbral) que:
+
+Filtre los productos donde el stock_actual sea menor al stock_umbral y la demanda_mensual sea mayor al demanda_umbral.
+
+Cree una nueva columna llamada indice_prioridad calculada como: (demanda_mensual - stock_actual) / demanda_mensual.
+
+Ordene el DataFrame resultante por indice_prioridad de forma descendente.
+
+Devuelva el DataFrame filtrado y ordenado, con el índice reiniciado.
