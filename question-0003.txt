@@ -5,10 +5,10 @@ Una planta de energía solar registra la eficiencia de sus paneles. Necesitas cl
 Tu Misión:
 Escribe una función llamada entrenar_clasificador_paneles(X, y) que realice lo siguiente:
 
-Escale las características X usando RobustScaler de sklearn (para manejar posibles valores atípicos de sensores).
+1.Escale las características X usando RobustScaler de sklearn (para manejar posibles valores atípicos de sensores).
 
-Entrene un modelo RandomForestClassifier con n_estimators=50 y random_state=42.
+2.Entrene un modelo RandomForestClassifier con n_estimators=50 y random_state=42.
 
-Realice predicciones sobre los mismos datos de entrada X transformados.
+3.Realice predicciones sobre los mismos datos de entrada X transformados.
 
-Devuelva una tupla con: (el modelo entrenado, el array de predicciones de numpy
+4.Devuelva una tupla con: (el modelo entrenado, el array de predicciones de numpy
