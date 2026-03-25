@@ -1,0 +1,12 @@
+Optimización de Rutas Logísticas (Pandas + Numpy)
+Problema
+Una empresa de mensajería quiere identificar rutas ineficientes basándose en el consumo de combustible por kilómetro. Recibes un DataFrame con registros de viajes.
+Tu Misión: Escribe una función llamada analizar_eficiencia_rutas(df, umbral_consumo) que:
+
+1.Calcule una nueva columna consumo_por_km dividiendo litros_consumidos entre distancia_km.
+
+2.Filtre las rutas donde consumo_por_km sea superior al umbral_consumo.
+
+3.Para estas rutas ineficientes, calcule el exceso de costo suponiendo un precio de 5.0 por litro: exceso = (consumo_por_km - umbral_consumo) * distancia_km * 5.0.
+
+4.Devuelva el DataFrame resultante ordenado por exceso de forma descendente y con el índice reiniciado.
