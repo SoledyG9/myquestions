@@ -6,13 +6,11 @@ Además, tienes demasiadas variables y necesitas un modelo que ignore las que no
 
 Tu Misión:
 Escribe una función llamada entrenar_modelo_estacional(df, target_col, fecha_col) que realice lo siguiente:
-Convierta la columna fecha_col a formato datetime de pandas.
-Extraiga el día de la semana (0-6).
-Aplique una transformación cíclica al día de la semana creando dos nuevas columnas:
-dia_sin = sin(2 * pi * dia / 7)
-dia_cos = cos(2 * pi * dia / 7)
-(Esto ayuda al modelo a entender que el domingo está cerca del lunes).
-Elimine la columna de fecha original y cualquier otra columna no numérica (excepto el target).
-Escale las características usando StandardScaler.
-Entrene un modelo de Regresión Lasso (Lasso) de sklearn con alpha=0.1.
-Devuelva una tupla con: (el modelo entrenado, el número de coeficientes que el modelo puso exactamente a cero, y el error absoluto medio (MAE) en el mismo set de entrenamiento).
+1.Convierta la columna fecha_col a formato datetime de pandas.
+2.Extraiga el día de la semana (0-6).
+3.Aplique una transformación cíclica al día de la semana creando dos nuevas columnas:
+dia_sin = sin(2 * pi * dia / 7) dia_cos = cos(2 * pi * dia / 7) (Esto ayuda al modelo a entender que el domingo está cerca del lunes).
+4.Elimine la columna de fecha original y cualquier otra columna no numérica (excepto el target).
+5.Escale las características usando StandardScaler.
+6.Entrene un modelo de Regresión Lasso (Lasso) de sklearn con alpha=0.1.
+7.Devuelva una tupla con: (el modelo entrenado, el número de coeficientes que el modelo puso exactamente a cero, y el error absoluto medio (MAE) en el mismo set de entrenamiento).
