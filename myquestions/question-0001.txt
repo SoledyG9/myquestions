@@ -1,0 +1,16 @@
+Ingeniería de Características Cíclicas y Regularización Lasso
+El Problema:
+Trabajas para una plataforma de e-commerce que quiere predecir la demanda de productos. Los datos de ventas tienen un fuerte componente estacional (semanal y mensual). 
+Los modelos lineales simples fallan al interpretar el "día 31" como algo lejano al "día 1", cuando en realidad son consecutivos en el ciclo mensual. 
+Además, tienes demasiadas variables y necesitas un modelo que ignore las que no aportan valor.
+
+Tu Misión:
+Escribe una función llamada entrenar_modelo_estacional(df, target_col, fecha_col) que realice lo siguiente:
+1.Convierta la columna fecha_col a formato datetime de pandas.
+2.Extraiga el día de la semana (0-6).
+3.Aplique una transformación cíclica al día de la semana creando dos nuevas columnas:
+dia_sin = sin(2 * pi * dia / 7) dia_cos = cos(2 * pi * dia / 7) (Esto ayuda al modelo a entender que el domingo está cerca del lunes).
+4.Elimine la columna de fecha original y cualquier otra columna no numérica (excepto el target).
+5.Escale las características usando StandardScaler.
+6.Entrene un modelo de Regresión Lasso (Lasso) de sklearn con alpha=0.1.
+7.Devuelva una tupla con: (el modelo entrenado, el número de coeficientes que el modelo puso exactamente a cero, y el error absoluto medio (MAE) en el mismo set de entrenamiento).
